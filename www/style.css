@@ -1,1 +1,253 @@
- 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #120b25;
+  color: white;
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top left, #742cff55, transparent 35%),
+    radial-gradient(circle at bottom right, #008cff55, transparent 35%),
+    linear-gradient(135deg, #160d2e, #211044, #071b3d);
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #100a20cc;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: blur(15px);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  background: linear-gradient(90deg, #d86cff, #ff69b4, #48a9ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+header p {
+  margin: 3px 0 0;
+  color: #aaa;
+  font-size: 11px;
+}
+
+button {
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+header button {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #ffffff12;
+  font-size: 22px;
+}
+
+aside {
+  position: fixed;
+  top: 70px;
+  right: -290px;
+  width: 290px;
+  height: calc(100vh - 70px);
+  background: #100a20f5;
+  border-left: 1px solid #ffffff20;
+  padding: 15px;
+  z-index: 10;
+  transition: .25s;
+  overflow-y: auto;
+  backdrop-filter: blur(20px);
+}
+
+aside.open {
+  right: 0;
+}
+
+aside button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #703cff, #3c8dff);
+}
+
+aside h3 {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.chat-item,
+.project-item {
+  padding: 11px;
+  margin: 6px 0;
+  border-radius: 10px;
+  background: #ffffff0c;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 17px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.user {
+  margin-right: auto;
+  background: linear-gradient(135deg, #663cff, #b04cff);
+  border-bottom-right-radius: 4px;
+}
+
+.ai {
+  margin-left: auto;
+  background: #ffffff12;
+  border: 1px solid #ffffff15;
+  border-bottom-left-radius: 4px;
+}
+
+.typing {
+  padding: 5px 20px;
+  color: #aaa;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 20px;
+  background: #ffffff12;
+  border: 1px solid #ffffff20;
+}
+
+#messageInput {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: white;
+  background: transparent;
+  font-size: 16px;
+}
+
+#messageInput::placeholder {
+  color: #aaa;
+}
+
+.input-area button {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #8b3dff, #258dff);
+  font-size: 18px;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px;
+}
+
+.tools button {
+  padding: 8px 13px;
+  border-radius: 10px;
+  background: #ffffff12;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #000b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-box {
+  width: min(600px, 100%);
+  max-height: 85vh;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: #17102b;
+  border: 1px solid #ffffff20;
+}
+
+.modal-box h2 {
+  color: #d982ff;
+}
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select {
+  width: 100%;
+  padding: 12px;
+  margin: 7px 0;
+  border: 1px solid #ffffff20;
+  border-radius: 10px;
+  background: #ffffff10;
+  color: white;
+}
+
+.modal-box button.action {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #783cff, #258dff);
+}
+
+#closeModal {
+  float: left;
+  background: transparent;
+  font-size: 20px;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #ffffff30;
+  border-radius: 12px;
+  background: white;
+}
+
+pre {
+  direction: ltr;
+  text-align: left;
+  overflow-x: auto;
+} 
