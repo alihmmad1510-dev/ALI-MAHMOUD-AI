@@ -1,1 +1,19 @@
- 
+{
+  "name": "ali-mahmoud-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "npx cap sync android"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/android": "^7.4.0",
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.0"
+  }
+} 
