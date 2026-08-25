@@ -1,1 +1,8 @@
- 
+{
+  "appId": "com.alimahmoud.ai",
+  "appName": "ALI MAHMOUD AI",
+  "webDir": "www",
+  "server": {
+    "cleartext": true
+  }
+} 
